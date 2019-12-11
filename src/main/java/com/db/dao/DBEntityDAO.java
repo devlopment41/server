@@ -57,7 +57,11 @@ public abstract class DBEntityDAO<ENTITY, KEY extends Serializable> extends Enti
 	 */
 	@SuppressWarnings("unchecked")
 	public KEY create(ENTITY newEntity) {
-		return (KEY) getSession().save(newEntity);
+		Session session = getSession();
+		Transaction tx = session.beginTransaction();
+		KEY key = (KEY) session.save(newEntity);
+		tx.commit();
+		return key;
 	}
 
 	/**
@@ -66,7 +70,10 @@ public abstract class DBEntityDAO<ENTITY, KEY extends Serializable> extends Enti
 	 * @param updatedEntity
 	 */
 	public void update(ENTITY updatedEntity) {
-		getSession().update(updatedEntity);
+		Session session = getSession();
+		Transaction tx = session.beginTransaction();
+		 session.update(updatedEntity);
+		tx.commit();
 	}
 
 	/**
@@ -75,8 +82,10 @@ public abstract class DBEntityDAO<ENTITY, KEY extends Serializable> extends Enti
 	 * @param key
 	 */
 	public void delete(KEY key) {
-		ENTITY entity = load(key);
-		getSession().delete(entity);
+		Session session = getSession();
+		Transaction tx = session.beginTransaction();
+		session.delete(key);
+		tx.commit();
 	}
 
 	/**
@@ -207,7 +216,8 @@ public abstract class DBEntityDAO<ENTITY, KEY extends Serializable> extends Enti
 	 */
 	protected Session getSession() {
 		Session session = HibernateUtil.getSessionFactory().openSession();
-		session.beginTransaction();
+		Transaction tx = session.beginTransaction();
+		tx.commit();
 		return session;
 	}
 
