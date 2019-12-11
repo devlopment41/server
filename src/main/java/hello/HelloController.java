@@ -1,5 +1,6 @@
 package hello;
 
+import com.db.dao.model.UserDAO;
 import com.db.model.HibernateUtil;
 import com.db.model.User;
 import org.hibernate.Session;
@@ -16,12 +17,13 @@ public class HelloController {
     }
 
     @RequestMapping("/user")
-    public String user() {
+    public int user() {
 
-        Session session = HibernateUtil.getSessionFactory().openSession();
-        session.beginTransaction();
-
-        return session.get(User.class,1).toString();
+        UserDAO dao = new UserDAO();
+        User user = new User();
+        user.setId(2);
+        dao.create(user);
+       return dao.list().toArray().length;
     }
 
 }
