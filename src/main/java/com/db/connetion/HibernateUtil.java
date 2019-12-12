@@ -12,6 +12,7 @@ public class HibernateUtil {
     private static SessionFactory buildSessionFactory() {
         try {
             return new AnnotationConfiguration()
+                    .configure()
                     .addAnnotatedClass(User.class)
                     .buildSessionFactory(); //add package if used.
         } catch (Throwable ex) {

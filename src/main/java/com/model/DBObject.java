@@ -2,8 +2,7 @@ package com.model;
 
 import javax.persistence.*;
 
-@Entity
-@Table(name = "dBObject", schema = "server")
+@MappedSuperclass
 public class DBObject {
     @Id
     @GeneratedValue
