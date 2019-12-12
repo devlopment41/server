@@ -11,9 +11,8 @@ public class HibernateUtil {
     private static SessionFactory buildSessionFactory() {
         try {
             return new AnnotationConfiguration().
-                    configure().
-                    //addPackage("com.xyz") //add package if used.
-                            addAnnotatedClass(User.class).
+                    configure().addPackage("model") //add package if used.
+
                             buildSessionFactory();
         } catch (Throwable ex) {
             System.err.println("Failed to create sessionFactory object." + ex);
