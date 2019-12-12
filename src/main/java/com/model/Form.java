@@ -1,4 +1,4 @@
-package model;
+package com.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -8,19 +8,15 @@ import javax.xml.crypto.Data;
 @Entity
 @Table(name = "form", schema = "server")
 public class Form extends DBObject {
-    @Name
     @GeneratedValue
     @Column(name = "name")
     private String name;
-    @Issue
     @GeneratedValue
     @Column(name = "issue")
     private String issue;
-    @Fdata
     @GeneratedValue
     @Column(name = "fdata")
     private Data fdata;
-    @Document_id
     @GeneratedValue
     @Column(name = "document_id")
     private int document_id;

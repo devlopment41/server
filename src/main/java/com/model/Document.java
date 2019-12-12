@@ -1,4 +1,4 @@
-package model;
+package com.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -6,17 +6,15 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "account", schema = "server")
-public class Account extends DBObject {
+@Table(name = "document", schema = "server")
+public class Document extends DBObject {
 
-    @Name
     @GeneratedValue
     @Column(name = "name")
-    private  String name;
-    @Company
+    private String name;
     @GeneratedValue
-    @Column(name = "company")
-    private  String company;
+    @Column(name = "path")
+    private String path;
 
     public String getName() {
         return name;
@@ -26,12 +24,13 @@ public class Account extends DBObject {
         this.name = name;
     }
 
-    public String getCompany() {
-        return company;
+    public String getPath() {
+        return path;
     }
 
-    public void setCompany(String company) {
-        this.company = company;
+    public void setPath(String path) {
+        this.path = path;
     }
+
 
 }

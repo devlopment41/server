@@ -1,4 +1,4 @@
-package model;
+package com.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -10,19 +10,15 @@ import javax.persistence.Table;
 
 public class Services extends DBObject {
 
-    @Name
     @GeneratedValue
     @Column(name = "name")
     private String name;
-    @Phone
     @GeneratedValue
     @Column(name = "phone")
     private int phone;
-    @Issue
     @GeneratedValue
     @Column(name = "issue")
     private String issue;
-    @Address
     @GeneratedValue
     @Column(name = "address")
     private String address;

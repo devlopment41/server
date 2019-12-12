@@ -1,4 +1,4 @@
-package model;
+package com.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -9,15 +9,12 @@ import javax.persistence.Table;
 @Table(name = "action", schema = "server")
 public class Action extends DBObject {
 
-    @Object_class
     @GeneratedValue
     @Column(name = "object_class")
     private String object_class;
-    @Object_id
     @GeneratedValue
     @Column(name = "object_id")
     private int object_id;
-    @User_id
     @GeneratedValue
     @Column(name = "user_id")
     private int user_id;

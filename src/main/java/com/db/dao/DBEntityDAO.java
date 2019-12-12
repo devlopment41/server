@@ -1,6 +1,6 @@
 package com.db.dao;
 
-import com.db.model.HibernateUtil;
+import com.db.connetion.HibernateUtil;
 import com.utils.ArrayUtils;
 import com.utils.PairType;
 import org.hibernate.*;
@@ -8,11 +8,9 @@ import org.hibernate.criterion.MatchMode;
 import org.hibernate.criterion.Restrictions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.io.Serializable;
 import java.lang.reflect.Field;
-import java.lang.reflect.Proxy;
 import java.util.List;
 
 /**

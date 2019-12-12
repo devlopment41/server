@@ -1,4 +1,4 @@
-package model;
+package com.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -8,31 +8,24 @@ import javax.xml.crypto.Data;
 @Entity
 @Table(name = "medicine", schema = "server")
 public class Medicine extends DBObject {
-    @Name
     @GeneratedValue
     @Column(name = "name")
     private String name;
-    @User_manual
     @GeneratedValue
     @Column(name = "user_manual")
     private String user_manual;
-    @Price
     @GeneratedValue
     @Column(name = "price")
     private int price;
-    @Side_effects
     @GeneratedValue
     @Column(name = "side_effects")
     private String side_effects;
-    @Description
     @GeneratedValue
-    @Column(name = "description")
-    private String description;
-    @Dosage
+    @Column(name = "information")
+    private String information;
     @GeneratedValue
     @Column(name = "dosage")
     private int dosage;
-    @Exp
     @GeneratedValue
     @Column(name = "exp")
     private Data exp;

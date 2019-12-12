@@ -1,12 +1,12 @@
 package hello;
 
 import com.db.dao.model.UserDAO;
-import com.db.model.HibernateUtil;
-import com.db.model.User;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
+import com.model.User;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import java.util.List;
 
 @RestController
 public class HelloController {
@@ -17,13 +17,13 @@ public class HelloController {
     }
 
     @RequestMapping("/user")
-    public int user() {
-
+    @ResponseBody
+    public  List<User> user() {
         UserDAO dao = new UserDAO();
         User user = new User();
         user.setId(2);
         dao.create(user);
-       return dao.list().toArray().length;
+       return dao.list();
     }
 
 }

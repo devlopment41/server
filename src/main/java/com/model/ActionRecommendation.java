@@ -1,4 +1,4 @@
-package model;
+package com.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -6,33 +6,26 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Table;
 import java.util.Date;
 @Entity
-@Table(name = "ActionTest", schema = "server")
-public class ActionTest extends DBObject {
+@Table(name = "actionRecommendation", schema = "server")
+public class ActionRecommendation extends DBObject {
 
-    @Name
-    @GeneratedValue
-    @Column(name = "name")
-    private  String name;
-    @Date
-    @GeneratedValue
-    @Column(name = "date")
-    private Date date;
-    @Kind
-    @GeneratedValue
-    @Column(name = "kind")
-    private String kind;
-    @Reason
     @GeneratedValue
     @Column(name = "reason")
     private String reason;
+    @GeneratedValue
+    @Column(name = "date")
+    private Date date;
+    @GeneratedValue
+    @Column(name = "kind")
+    private String kind;
 
 
-    public String getName() {
-        return name;
+    public String getReason() {
+        return reason;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setReason(String reason) {
+        this.reason = reason;
     }
 
     public Date getDate() {
@@ -49,14 +42,6 @@ public class ActionTest extends DBObject {
 
     public void setKind(String kind) {
         this.kind = kind;
-    }
-
-    public String getReason() {
-        return reason;
-    }
-
-    public void setReason(String reason) {
-        this.reason = reason;
     }
 
 }

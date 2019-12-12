@@ -1,4 +1,4 @@
-package model;
+package com.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -9,7 +9,6 @@ import javax.persistence.Table;
 @Table(name = "information", schema = "server")
 public class Information extends DBObject {
 
-    @Kind
     @GeneratedValue
     @Column(name = "kind")
     private String kind;

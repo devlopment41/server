@@ -1,4 +1,4 @@
-package model;
+package com.model;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -8,35 +8,27 @@ import java.util.Date;
 public class User extends DBObject {
 
 
-    @User_name
     @GeneratedValue
     @Column(name = "user_name")
     private String user_name;
-    @Password
     @GeneratedValue
     @Column(name = "password")
     private int password;
-    @Full_name
     @GeneratedValue
     @Column(name = "full_name")
     private String full_name;
-    @Email
     @GeneratedValue
     @Column(name = "email")
     private String email;
-    @Phone
     @GeneratedValue
     @Column(name = "phone")
     private int phone;
-    @Address
     @GeneratedValue
     @Column(name = "address")
     private String address;
-    @Gender
     @GeneratedValue
     @Column(name = "gender")
     private String gender;
-    @Birth_date
     @GeneratedValue
     @Column(name = "birth_date")
     private Date birth_date;

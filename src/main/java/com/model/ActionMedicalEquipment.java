@@ -1,4 +1,4 @@
-package model;
+package com.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -8,27 +8,21 @@ import java.util.Date;
 @Entity
 @Table(name = "actionMedicalEquipment", schema = "server")
 public class ActionMedicalEquipment extends DBObject {
-    @Name
     @GeneratedValue
     @Column(name = "name")
     private  String name;
-    @Price
     @GeneratedValue
     @Column(name = "price")
     private int price;
-    @IsRenting
     @GeneratedValue
     @Column(name = "isRenting")
     private boolean isRenting;
-    @IsSale
     @GeneratedValue
     @Column(name = "isSale")
     private boolean isSale;
-    @Exp
     @GeneratedValue
     @Column(name = "exp")
     private Date exp;
-    @Information
     @GeneratedValue
     @Column(name = "information")
     private  String information;

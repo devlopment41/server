@@ -5,9 +5,7 @@
 <hibernate-configuration>
 	<session-factory>
 
-		<property name = "hibernate.dialect">
-			org.hibernate.dialect.MySQLDialect
-		</property>
+		<property name = "hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
 
 		<property name = "hibernate.connection.driver_class">
 			com.mysql.jdbc.Driver
@@ -20,11 +18,11 @@
 		</property>
 
 		<property name = "hibernate.connection.username">
-			chaya1724
+			user
 		</property>
 
 		<property name = "hibernate.connection.password">
-			205457732
+			pass
 		</property>
 
 	</session-factory>

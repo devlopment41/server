@@ -1,4 +1,4 @@
-package model;
+package com.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -9,15 +9,13 @@ import java.util.Date;
 @Table(name = "actionCalls", schema = "server")
 public class ActionCalls extends DBObject {
 
-    @Issue
     @GeneratedValue
     @Column(name = "issue")
     private String issue;
-    @Date
     @GeneratedValue
     @Column(name = "date")
     private Date date;
-    @Description
+
     @GeneratedValue
     @Column(name = "description")
     private String description;
