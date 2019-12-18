@@ -1,6 +1,8 @@
 package hello;
 
+//import com.db.dao.model.DoctorDAO;
 import com.db.dao.model.UserDAO;
+import com.model.Doctor;
 import com.model.User;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -25,5 +27,12 @@ public class HelloController {
         dao.create(user);
        return dao.list();
     }
+//    public  List<Doctor> doctor() {
+//        DoctorDAO dao = new DoctorDAO();
+//        Doctor doctor = new Doctor();
+//        doctor.setId(2);
+//        dao.create(doctor);
+//        return dao.list();
+//    }
 
 }
