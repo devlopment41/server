@@ -30,7 +30,6 @@ public abstract class DBEntityDAO<ENTITY, KEY extends Serializable> extends Enti
 	 * Reference to the session factory
 	 */
 
-
 /*	private Session sessionFactory;
 
 	*//**

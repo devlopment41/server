@@ -35,6 +35,30 @@ public class Doctor extends DBObject {
     @GeneratedValue
     @Column(name = "field_treatment")
     private String field_treatment;
+    @GeneratedValue
+    @Column(name = "city")
+    private  String city;
+    @GeneratedValue
+    @Column(name = "street")
+    private String  street;
+    public String getStreet() {
+        return street;
+    }
+
+    public void setStreet(String street) {
+        this.street = street;
+    }
+
+
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
 
 
     public String getName() {

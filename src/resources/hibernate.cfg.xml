@@ -10,13 +10,14 @@
 		</property>
 
 		<property name = "hibernate.connection.driver_class">
-			com.mysql.jdbc.Driver
+			com.mysql.cj.jdbc.Driver
 		</property>
 
 		<!-- Assume students is the database name -->
 
 		<property name = "hibernate.connection.url">
 			jdbc:mysql://localhost:3306/server?serverTimezone=UTC
+<!--			jdbc:mysql://localhost:8080/server?serverTimezone=UTC-->
 		</property>
 
 		<property name = "hibernate.connection.username">
